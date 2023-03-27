@@ -8,10 +8,13 @@ const ingredients = [
   "Herbs",
   "Condiments",
 ];
+const ingredientsContainer = document.createDocumentFragment();
 
 ingredients.forEach((ingredient) => {
   let element = document.createElement("li");
   element.textContent = ingredient;
   element.classList.add("item");
-  list.appendChild(element);
+  ingredientsContainer.appendChild(element);
 });
+
+list.appendChild(ingredientsContainer);
